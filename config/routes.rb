@@ -1,15 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+  map.devise_for :users
+
   
   map.root :controller => "pages", :action => "home"
   map.about "about", :controller => "pages", :action =>"about"
   
   map.resources :auctions
+  map.resources :users
 
   map.resources :investments
-
-  map.resources :wallets
-
-  map.resources :users
 
   map.resources :wallets
 
@@ -52,6 +51,6 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  #map.connect ':controller/:action/:id'
+  #map.connect ':controller/:action/:id.:format'
 end
