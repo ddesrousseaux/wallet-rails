@@ -1,0 +1,18 @@
+<h1>Listing wallets</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @wallets.each do |wallet| %>
+  <tr>
+    <td><%= link_to 'Show', wallet %></td>
+    <td><%= link_to 'Edit', edit_wallet_path(wallet) %></td>
+    <td><%= link_to 'Destroy', wallet, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New wallet', new_wallet_path %>
