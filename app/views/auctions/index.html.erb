@@ -1,4 +1,22 @@
-<% for auction in @auctions %>
-<%= auction.name + " " + auction.exchange_rate.to_s %>
-<%= auction.class %>
+<h1>Listing auctions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Exchange rate</th>
+  </tr>
+
+<% @auctions.each do |auction| %>
+  <tr>
+    <td><%=h auction.name %></td>
+    <td><%=h auction.exchange_rate %></td>
+    <td><%= link_to 'Show', auction %></td>
+    <td><%= link_to 'Edit', edit_auction_path(auction) %></td>
+    <td><%= link_to 'Destroy', auction, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
 <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New auction', new_auction_path %>

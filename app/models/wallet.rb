@@ -1,4 +1,4 @@
 class Wallet < ActiveRecord::Base
-  has_many :auctions
+  has_many :investments
   belongs_to :user
 end

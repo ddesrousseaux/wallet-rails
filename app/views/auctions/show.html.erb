@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @auction.name %>
+</p>
+
+<p>
+  <b>Exchange rate:</b>
+  <%=h @auction.exchange_rate %>
+</p>
+
+
+<%= link_to 'Edit', edit_auction_path(@auction) %> |
+<%= link_to 'Back', auctions_path %>

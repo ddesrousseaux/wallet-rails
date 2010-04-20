@@ -1,0 +1,24 @@
+<h1>Editing investment</h1>
+
+<% form_for(@investment) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </p>
+  <p>
+    <%= f.label :wallet_id %><br />
+    <%= f.text_field :wallet_id %>
+  </p>
+  <p>
+    <%= f.label :auction_id %><br />
+    <%= f.text_field :auction_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @investment %> |
+<%= link_to 'Back', investments_path %>

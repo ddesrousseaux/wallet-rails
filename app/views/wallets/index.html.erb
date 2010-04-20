@@ -2,10 +2,14 @@
 
 <table>
   <tr>
+    <th>Name</th>
+    <th>User</th>
   </tr>
 
 <% @wallets.each do |wallet| %>
   <tr>
+    <td><%=h wallet.name %></td>
+    <td><%=h wallet.user_id %></td>
     <td><%= link_to 'Show', wallet %></td>
     <td><%= link_to 'Edit', edit_wallet_path(wallet) %></td>
     <td><%= link_to 'Destroy', wallet, :confirm => 'Are you sure?', :method => :delete %></td>
