@@ -8,6 +8,15 @@
   <%=h @wallet.user_id %>
 </p>
 
+<p>
+  <b>Investments:</b>
+  <ul>
+    <% for inv in @wallet.investments %>
+    <li><%= link_to inv.id, investment_path(inv) %><li />
+    <% end %>
+  </ul>
+</p>
+
 
 <%= link_to 'Edit', edit_wallet_path(@wallet) %> |
 <%= link_to 'Back', wallets_path %>
