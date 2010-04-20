@@ -1,3 +1,4 @@
 <% for auction in @auctions %>
 <%= auction.name + " " + auction.exchange_rate.to_s %>
+<%= auction.class %>
 <% end %>
