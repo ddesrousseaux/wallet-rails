@@ -2,7 +2,7 @@ class AuctionsController < ApplicationController
   # GET /auctions
   # GET /auctions.xml
   def index
-    @auctions = Auction.all
+    @auctions = Auction.find :all
 
     respond_to do |format|
       format.html # index.html.erb
