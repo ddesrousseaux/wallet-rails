@@ -1,17 +1,6 @@
 %h1
   Editing auction
-- form_for(@auction) do |f|
-  = f.error_messages
-  %p
-    = f.label :name
-    %br
-    = f.text_field :name
-  %p
-    = f.label :exchange_rate
-    %br
-    = f.text_field :exchange_rate
-  %p
-    = f.submit 'Update'
+= render :partial => "form", :locals => {:submitlabel => "Update"}
 
 = link_to 'Show', @auction
 |

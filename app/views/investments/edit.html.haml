@@ -1,21 +1,6 @@
 %h1
   Editing investment
-- form_for(@investment) do |f|
-  = f.error_messages
-  %p
-    = f.label :quantity
-    %br
-    = f.text_field :quantity
-  %p
-    = f.label :wallet_id
-    %br
-    = f.text_field :wallet_id
-  %p
-    = f.label :auction_id
-    %br
-    = f.text_field :auction_id
-  %p
-    = f.submit 'Update'
+= render :partial => "form", :locals => {:submitlabel => "Update"}
 
 = link_to 'Show', @investment
 |
