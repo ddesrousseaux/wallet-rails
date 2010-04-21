@@ -1,9 +1,0 @@
-<h1>Welcome home</h1>
-
-<ul>
-  <% for u in @users %>
-  <li><%= link_to u.lastname, user_path(u) %></li>
-  <% end %>
-</ul>
-
-<p><%= link_to 'about', about_path %></p>

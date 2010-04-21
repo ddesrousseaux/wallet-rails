@@ -1,0 +1,20 @@
+%p
+  %b
+    Name:
+  = h @wallet.name
+%p
+  %b
+    User:
+  = h @wallet.user_id
+%p
+  %b
+    Investments:
+  %ul
+    - for inv in @wallet.investments
+      %li
+        = link_to inv.id, investment_path(inv)
+      %li
+
+= link_to 'Edit', edit_wallet_path(@wallet)
+|
+= link_to 'Back', wallets_path

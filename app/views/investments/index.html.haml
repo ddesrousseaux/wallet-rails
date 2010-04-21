@@ -1,0 +1,26 @@
+%h1
+  Listing investments
+%table
+  %tr
+    %th
+      Quantity
+    %th
+      Wallet
+    %th
+      Auction
+  - @investments.each do |investment|
+    %tr
+      %td
+        = h investment.quantity
+      %td
+        = h investment.wallet_id
+      %td
+        = h investment.auction_id
+      %td
+        = link_to 'Show', investment
+      %td
+        = link_to 'Edit', edit_investment_path(investment)
+      %td
+        = link_to 'Destroy', investment, :confirm => 'Are you sure?', :method => :delete
+%br
+= link_to 'New investment', new_investment_path

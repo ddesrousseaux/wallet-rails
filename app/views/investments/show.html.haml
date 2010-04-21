@@ -1,0 +1,15 @@
+%p
+  %b
+    Quantity:
+  = h @investment.quantity
+%p
+  %b
+    Wallet:
+  = h @investment.wallet_id
+%p
+  %b
+    Auction:
+  = h @investment.auction_id
+= link_to 'Edit', edit_investment_path(@investment)
+|
+= link_to 'Back', investments_path

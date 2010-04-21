@@ -1,0 +1,16 @@
+%h1
+  New wallet
+- form_for(@wallet) do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :user_id
+    %br
+    = f.text_field :user_id
+  %p
+    = f.submit 'Create'
+
+= link_to 'Back', wallets_path

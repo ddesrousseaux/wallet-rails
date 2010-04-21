@@ -1,0 +1,23 @@
+%p
+  %b
+    Firstname:
+  = h @user.firstname
+%p
+  %b
+    Lastname:
+  = h @user.lastname
+%p
+  %b
+    Email:
+  = h @user.email
+%p
+  %b
+    Wallets:
+  %ul
+    - for w in @user.wallets
+      %li
+        = link_to w.name, wallet_path(w)
+      %li
+= link_to 'Edit', edit_user_path(@user)
+|
+= link_to 'Back', users_path

@@ -12,7 +12,7 @@ namespace :convert do
       out_filename+= '/'+ File.basename(file, ".erb")
       out_filename+= ".haml"
       sh "html2haml #{file} #{out_filename}"
-      # File.delete(file)
+      File.delete(file)
     end
     # sh "html2haml app/views/layouts/application.html.erb app/views/layouts/application.html.haml"
     # File.delete("app/views/layouts/application.html.erb")
@@ -28,8 +28,8 @@ namespace :convert do
     for file in @files
       out_filename = File.basename(file, ".css")
       out_filename+= ".sass"
-      #sh "css2sass #{file} #{css_out_dir}/#{out_filename}"
-      # File.delete(file)
+      sh "css2sass #{file} #{css_out_dir}/#{out_filename}"
+      File.delete(file)
     end
   end
 

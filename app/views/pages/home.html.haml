@@ -1,0 +1,9 @@
+%h1
+  Welcome home
+%ul
+  - for u in @users
+    %li
+      = link_to u.lastname, user_path(u)
+
+%p
+  = link_to 'about', about_path
