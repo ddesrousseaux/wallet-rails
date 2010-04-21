@@ -82,4 +82,13 @@ class AuctionsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  #search in auctions
+  def search
+    if params[:auction] != nil
+      @search= params[:auction]
+      @auctions = Auction.paginate_by_sql ['SELECT * FROM auctions WHERE auctions.name LIKE ?', '%'+@search[:name]+'%'],
+                       :page => params[:page]
+    end
+  end
 end

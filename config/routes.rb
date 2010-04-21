@@ -4,7 +4,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => "pages", :action => "home"
   map.about "about", :controller => "pages", :action =>"about"
-  
+
+  map.auctions_search "auctions/search", :controller => "auctions", :action =>"search", :method => "GET"
+
   map.resources :auctions
   map.resources :users
 
