@@ -17,6 +17,7 @@ Rails::Initializer.run do |config|
   # Specify gems that this application depends on and have them installed with rake gems:install
   # config.gem "bj"
   config.gem "devise", :version => '1.0.6'
+  config.gem "haml", :version => '2.2.23'
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
